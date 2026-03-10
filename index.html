@@ -3,24 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Product</title>
-    <style>
-        body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #f4f4f9; }
-        .card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 400px; text-align: center; }
-        img { max-width: 100%; border-radius: 8px; }
-        h1 { color: #333; }
-        .price { font-size: 1.5rem; color: #2ecc71; font-weight: bold; margin: 10px 0; }
-        .btn { display: inline-block; background: #007bff; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; transition: 0.3s; }
-        .btn:hover { background: #0056b3; }
-    </style>
+    <title>Modern Store | Premium Gear</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <div class="card">
-        <img src="https://via.placeholder.com/300" alt="Product Image">
-        <h1>Cool Product Name</h1>
-        <p>This is a brief, catchy description of what you're selling. Make them want it!</p>
-        <div class="price">$19.99</div>
-        <a href="#" class="btn">Buy Now</a>
-    </div>
+<body class="bg-gray-50 font-sans">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="text-2xl font-bold text-blue-600 tracking-tight">BRAND.</div>
+                <div class="hidden md:flex space-x-8 text-gray-600 font-medium">
+                    <a href="#" class="hover:text-blue-600">Home</a>
+                    <a href="#products" class="hover:text-blue-600">Shop</a>
+                    <a href="#" class="hover:text-blue-600">About</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <i class="fa-solid fa-magnifying-glass text-gray-500 cursor-pointer"></i>
+                    <i class="fa-solid fa-cart-shopping text-gray-500 cursor-pointer"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-white py-16 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                    Elevate Your Daily <br><span class="text-blue-600">Lifestyle.</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                    Discover our curated collection of premium essentials designed for the modern creator. Quality guaranteed.
+                </p>
+                <a href="#products" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-blue-700 transition">Shop Collection</a>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="Hero Product" class="rounded-2xl shadow-2xl">
+            </div>
+        </div>
+    </header>
+
+    <section id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Featured Products</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition border border-gray-100">
+                <div class="relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-black text-white px-3 py-1 text-xs font-bold uppercase tracking-widest rounded">New</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Premium Headphones</h3>
+                    <p class="text-gray-500 text-sm mb-4 italic">Noise-canceling, 40h battery life.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-gray-900">$299.00</span>
+                        <a href="YOUR_STRIPE_LINK_HERE" class="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-600 transition">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition border border-gray-100">
+                <div class="relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1526170315870-ef68973ef812?auto=format&fit=crop&w=500&q=80" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Vintage Camera</h3>
+                    <p class="text-gray-500 text-sm mb-4 italic">Authentic 35mm film experience.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-gray-900">$149.00</span>
+                        <a href="YOUR_STRIPE_LINK_HERE" class="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-600 transition">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition border border-gray-100">
+                <div class="relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&w=500&q=80" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Minimalist Watch</h3>
+                    <p class="text-gray-500 text-sm mb-4 italic">Stainless steel and leather band.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-gray-900">$85.00</span>
+                        <a href="YOUR_STRIPE_LINK_HERE" class="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-600 transition">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-400">&copy; 2026 BRAND Store. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <i class="fa-brands fa-instagram cursor-pointer hover:text-white text-gray-500"></i>
+                <i class="fa-brands fa-twitter cursor-pointer hover:text-white text-gray-500"></i>
+                <i class="fa-brands fa-facebook cursor-pointer hover:text-white text-gray-500"></i>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
+
